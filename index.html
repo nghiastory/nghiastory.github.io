@@ -1,0 +1,402 @@
+<!DOCTYPE html><html lang="vi"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.3.5"><title>Những Ngày Lặng Của Nghĩa | Bùi Trọng Nghĩa</title><meta name="description" content="Một góc tự sự của Bùi Trọng Nghĩa về cuộc sống, gia đình, công việc, sự cô đơn, những chú chó nhỏ đợi mình về, các mối quan hệ, âm nhạc và những ngày lặng."><link rel="canonical" href="https://example.com/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet"><meta property="og:type" content="website"><meta property="og:locale" content="vi_VN"><meta property="og:title" content="Những Ngày Lặng Của Nghĩa | Bùi Trọng Nghĩa"><meta property="og:description" content="Một góc tự sự của Bùi Trọng Nghĩa về cuộc sống, gia đình, công việc, sự cô đơn, những chú chó nhỏ đợi mình về, các mối quan hệ, âm nhạc và những ngày lặng."><meta property="og:url" content="https://example.com/"><meta property="og:image" content="/images/nghia-anime-main.png"><meta property="og:site_name" content="Những Ngày Lặng Của Nghĩa"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Những Ngày Lặng Của Nghĩa | Bùi Trọng Nghĩa"><meta name="twitter:description" content="Một góc tự sự của Bùi Trọng Nghĩa về cuộc sống, gia đình, công việc, sự cô đơn, những chú chó nhỏ đợi mình về, các mối quan hệ, âm nhạc và những ngày lặng."><meta name="twitter:image" content="/images/nghia-anime-main.png"><meta name="theme-color" content="#08111f"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Những Ngày Lặng Của Nghĩa","url":"https://example.com/","description":"Một góc tự sự của Bùi Trọng Nghĩa về cuộc sống, gia đình, công việc, sự cô đơn, những chú chó nhỏ đợi mình về, các mối quan hệ, âm nhạc và những ngày lặng.","author":{"@type":"Person","name":"Bùi Trọng Nghĩa"}}</script><link rel="stylesheet" href="/_astro/index.CHafAJCP.css"></head> <body> <div class="site-backdrop" aria-hidden="true"> <span class="orb orb-one"></span> <span class="orb orb-two"></span> <span class="orb orb-three"></span> <span class="dust dust-a"></span> <span class="dust dust-b"></span> <span class="dust dust-c"></span> <span class="dust dust-d"></span> <span class="dust dust-e"></span> </div> <div class="heart-rain" aria-hidden="true"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> </div> <aside class="today-widget" aria-label="Thời gian, khu vực và thời tiết hiện tại"> <button class="today-widget__toggle" type="button" aria-expanded="true" aria-controls="today-widget-panel"> <span>Hôm nay</span> <strong id="today-widget-mini-time">--:--</strong> </button> <div class="today-widget__panel" id="today-widget-panel"> <div class="today-widget__head"> <p>Góc nhỏ hôm nay</p> <button class="today-widget__collapse" type="button" aria-label="Thu gọn góc hôm nay">×</button> </div> <div class="today-widget__body"> <div class="today-widget__row"> <span aria-hidden="true">🕰</span> <div> <strong id="today-widget-time">--:--</strong> <small id="today-widget-date">Đang lấy thời gian...</small> </div> </div> <div class="today-widget__row"> <span aria-hidden="true">📍</span> <div> <strong id="today-widget-location">Hà Nội, Việt Nam</strong> <small id="today-widget-location-note">Có thể cập nhật theo vị trí của bạn</small> </div> </div> <div class="today-widget__row"> <span aria-hidden="true">🌤</span> <div> <strong id="today-widget-weather">Đang lấy thời tiết...</strong> <small id="today-widget-weather-note">Nguồn thời tiết miễn phí Open-Meteo</small> </div> </div> </div> <div class="today-widget__actions"> <button id="today-widget-location-button" type="button">Cập nhật vị trí</button> </div> </div> </aside>  <section id="entry-gate" class="entry-gate" aria-label="Màn hình mở đầu"> <div class="entry-gate__image" aria-hidden="true"></div> <div class="entry-gate__veil" aria-hidden="true"></div> <div class="entry-gate__content"> <p class="entry-gate__kicker">Bùi Trọng Nghĩa</p> <h1>Những Ngày Lặng Của Nghĩa</h1> <p>
+Có những ngày, mình chỉ cần một bài hát, một khoảng lặng, một nơi để trở về,
+      và vài điều nhỏ bé vẫn âm thầm đợi mình.
+</p> <div class="entry-gate__actions"> <button type="button" class="btn btn-primary" data-enter-music>Bước vào cùng âm nhạc</button> <button type="button" class="btn btn-ghost" data-enter-silent>Vào trong yên lặng</button> </div> </div> </section> <script>
+  const gate = document.getElementById('entry-gate');
+  const enterMusic = document.querySelector('[data-enter-music]');
+  const enterSilent = document.querySelector('[data-enter-silent]');
+
+  function closeGate() {
+    if (!gate) return;
+    gate.classList.add('entry-gate--hidden');
+    document.documentElement.classList.remove('entry-open');
+    window.setTimeout(() => gate.remove(), 700);
+  }
+
+  document.documentElement.classList.add('entry-open');
+
+  enterMusic?.addEventListener('click', () => {
+    closeGate();
+    window.dispatchEvent(new CustomEvent('nghia:start-music'));
+  });
+
+  enterSilent?.addEventListener('click', () => {
+    closeGate();
+  });
+</script> <main> <section class="hero-v3" aria-label="Giới thiệu Những Ngày Lặng Của Nghĩa"> <div class="hero-v3__light" aria-hidden="true"></div> <div class="hero-v3__inner"> <div class="hero-v3__copy" data-reveal> <p class="section-kicker">Online - Offline</p> <h1>Những Ngày Lặng Của Nghĩa</h1> <p>
+Một góc nhỏ để Nghĩa viết về cuộc sống, gia đình, công việc, sự cô đơn,
+        những chú chó nhỏ đợi mình về, âm nhạc và vài điều chưa biết kể với ai.
+</p> <div class="hero-v3__actions"> <a href="#hom-nay" class="btn btn-primary">Bắt đầu nhẹ thôi</a> <a href="#nhung-bai-hat" class="btn btn-ghost">Nghe playlist</a> </div> </div> <div class="hero-v3__art" data-reveal> <div class="hero-v3__photo"> <img src="/images/nghia-anime-main.png" alt="Nhân vật anime nam Bùi Trọng Nghĩa đeo kính, áo sơ mi trắng trong ánh hoàng hôn" width="1024" height="1365" loading="eager" decoding="async"> </div> <div class="hero-note hero-note--top">Cuối ngày</div> <div class="hero-note hero-note--mid">Một bài hát cũ</div> <div class="hero-note hero-note--bottom">Đường về nhà</div> </div> </div> </section> <div class="page-shell"> <section id="hom-nay" class="now-panel" data-reveal> <div class="now-panel__intro"> <p class="section-kicker">Hôm nay Nghĩa đang…</p> <h2>Một vài điều nhỏ trước khi câu chuyện bắt đầu</h2> <p>
+Không phải ngày nào cũng cần viết thật dài. Có khi chỉ cần gọi tên vài cảm giác,
+            để biết mình vẫn đang ở đây, vẫn đi qua ngày hôm nay bằng một nhịp rất riêng.
+</p> </div> <div class="now-grid" aria-label="Trạng thái hôm nay"> <article class="now-chip"> <span>Tâm trạng</span> <strong>Lặng một chút</strong> </article><article class="now-chip"> <span>Đang nghe</span> <strong>Năm Về Sau</strong> </article><article class="now-chip"> <span>Muốn giữ</span> <strong>Một bữa cơm nhà</strong> </article><article class="now-chip"> <span>Muốn buông</span> <strong>Những điều quá ồn</strong> </article> </div> </section> <section id="goc-nho-cua-nghia" class="mood-board" data-reveal> <div class="section-head"> <p class="section-kicker">Những mảnh đời sống</p> <h2>Không phải chương truyện. Chỉ là vài ô cửa nhỏ.</h2> <p>
+Mỗi ô là một lát cắt trong ngày: gia đình, công việc, sự cô đơn,
+            những chú chó nhỏ, âm nhạc và những người từng đi ngang qua đời mình.
+</p> </div> <div class="mood-grid"> <a class="mood-card mood-card--blue" href="#su-co-don"> <span class="mood-card__icon">🌌</span> <span class="mood-card__eyebrow">Khoảng lặng</span> <strong>Sự cô đơn</strong> <p>Không hẳn là buồn. Chỉ là có những tối mình cần ngồi yên một chút.</p> <em>Đọc thêm</em> </a><a class="mood-card mood-card--gold" href="#gia-dinh"> <span class="mood-card__icon">🏡</span> <span class="mood-card__eyebrow">Nơi quay về</span> <strong>Gia đình</strong> <p>Một bữa cơm quen, một tiếng gọi trong nhà, và vài câu hỏi giản dị.</p> <em>Đọc thêm</em> </a><a class="mood-card mood-card--warm" href="#nhung-chu-cho-nho"> <span class="mood-card__icon">🐾</span> <span class="mood-card__eyebrow">Điều nhỏ bé</span> <strong>Những chú chó nhỏ</strong> <p>Chúng không hỏi gì nhiều. Chúng chỉ mừng vì mình đã về.</p> <em>Đọc thêm</em> </a><a class="mood-card mood-card--blue" href="#cong-viec"> <span class="mood-card__icon">💻</span> <span class="mood-card__eyebrow">Nhịp sống</span> <strong>Công việc</strong> <p>Có những việc tưởng nhỏ, nhưng làm rồi mới thấy cần rất nhiều thời gian.</p> <em>Đọc thêm</em> </a><a class="mood-card mood-card--crimson" href="#moi-quan-he"> <span class="mood-card__icon">🕯️</span> <span class="mood-card__eyebrow">Người đến, người đi</span> <strong>Những mối quan hệ</strong> <p>Có người đi cùng một đoạn. Có người chỉ ghé qua một mùa.</p> <em>Đọc thêm</em> </a><a class="mood-card mood-card--gold" href="#mot-nua-cung-dang-nhu-minh"> <span class="mood-card__icon">✨</span> <span class="mood-card__eyebrow">Xa mà gần</span> <strong>Một nửa cũng đang như mình</strong> <p>Có thể đâu đó cũng có một người đang đi qua những ngày tương tự.</p> <em>Đọc thêm</em> </a> </div> </section> <section id="nhung-ngay-nhu-the" class="featured-diary-section" data-reveal> <article class="featured-diary featured-diary--warm"> <div class="featured-diary__meta"> <p class="section-kicker">Ghi chép cuối ngày</p> <h2>Có những ngày như thế</h2> <p>
+Một đoạn mở đầu đủ chậm để người ghé qua hiểu tinh thần của nơi này:
+        không vội, không ồn, chỉ là vài điều được đặt xuống sau một ngày dài.
+</p> </div> <div class="featured-diary__body"> <p> <span>01</span> Có những ngày Nghĩa đi qua rất nhiều việc, rất nhiều tin nhắn, rất nhiều ô cửa nhỏ trên màn hình. Việc này vừa xong, việc khác lại tới. Có vài lời hẹn chưa kịp trả lời, vài câu hỏi để đó, vài điều muốn nói nhưng rồi thôi. </p><p> <span>02</span> Đến cuối ngày, chỉ muốn mọi thứ chậm lại một chút. Không cần ồn ào, không cần ai phải hiểu hết. Chỉ cần một góc nhỏ, một bài hát quen, một khoảng sáng dịu trong phòng, và vài dòng đủ thật để đặt xuống những điều đã đi qua. </p><p> <span>03</span> Nơi này là một góc như vậy. Để viết về cuộc sống, gia đình, sự cô đơn, những chú chó nhỏ, công việc, những mối quan hệ, âm nhạc, và một người nào đó có lẽ cũng đang đi qua những ngày giống mình. </p> </div> </article> </section> <section class="life-cinema" data-reveal> <div class="section-head section-head--center"> <p class="section-kicker">Nhật ký mở nhẹ</p> <h2>Những điều nhỏ vẫn âm thầm ở đó</h2> <p>
+Bấm từng thẻ để đọc. Nội dung được giữ ngắn hơn, thoáng hơn,
+            để website giống một không gian cá nhân có nhạc và ánh chiều hơn là một trang truyện dài.
+</p> </div> <div class="life-grid"> <article id="su-co-don" class="life-card life-card--blue"> <div class="life-card__top"> <span>🌌</span> <div> <p>Khoảng lặng</p> <h3>Sự cô đơn</h3> </div> </div> <p class="life-card__summary">Không hẳn là buồn. Chỉ là có những tối mình cần ngồi yên một chút.</p> <details class="life-card__details"> <summary>Đọc vài dòng</summary> <div> <p>Có những lúc Nghĩa thấy cô đơn. Không hẳn là buồn. Chỉ là buổi tối yên quá, bài nhạc cũ vang lên đúng lúc quá, còn trong lòng thì có nhiều chuyện không biết nên kể từ đâu.</p><p>Có những cảm xúc nằm lại ở một đoạn đường về nhà, ở ánh đèn cuối phố, ở một câu hát nghe đi nghe lại nhiều lần. Mình vẫn ổn, vẫn làm việc, vẫn nói cười khi cần. Nhưng có những phần rất nhỏ bên trong chỉ muốn được ngồi yên.</p><p>Cô đơn không làm mình lạnh đi. Nó làm mình lặng hơn. Biết thương một bữa cơm đúng giờ, một lời hỏi han ngắn, một ánh đèn còn sáng, một con vật nhỏ chạy ra khi mình về tới cổng.</p> </div> </details> </article><article id="gia-dinh" class="life-card life-card--gold"> <div class="life-card__top"> <span>🏡</span> <div> <p>Nơi quay về</p> <h3>Gia đình</h3> </div> </div> <p class="life-card__summary">Một bữa cơm quen, một tiếng gọi trong nhà, và vài câu hỏi giản dị.</p> <details class="life-card__details"> <summary>Đọc vài dòng</summary> <div> <p>Sau cùng, gia đình vẫn là nơi Nghĩa muốn quay về. Một ngày ngoài kia có thể dài, nhưng khi về tới nhà, mọi thứ như dịu xuống. Có tiếng người trong bếp, có một bữa cơm quen, có khoảng sân nhỏ và những câu hỏi rất đời thường.</p><p>“Hôm nay thế nào?”, “Ăn gì chưa?”, “Có mệt không?” Những câu ấy nghe qua thì đơn giản, nhưng nhiều khi lại là thứ giữ mình khỏi cảm giác trôi quá xa.</p><p>Tình thương trong nhà không phải lúc nào cũng nói bằng những lời lớn. Nó nằm trong việc chờ nhau về, để phần cơm, nhắc nhau giữ sức, và âm thầm ở đó qua rất nhiều ngày.</p> </div> </details> </article><article id="nhung-chu-cho-nho" class="life-card life-card--warm"> <div class="life-card__top"> <span>🐾</span> <div> <p>Điều nhỏ bé</p> <h3>Những chú chó nhỏ</h3> </div> </div> <p class="life-card__summary">Chúng không hỏi gì nhiều. Chúng chỉ mừng vì mình đã về.</p> <details class="life-card__details"> <summary>Đọc vài dòng</summary> <div> <p>Sau một ngày dài, có lúc Nghĩa chỉ mong tới khoảnh khắc về gần tới cổng. Chưa cần gọi, những chú chó nhỏ đã chạy ra, như thể chúng đã nghe được tiếng bước chân quen từ rất xa.</p><p>Chúng không hỏi hôm nay mình mệt không. Không biết ngoài kia mình đã gặp chuyện gì. Không cần mình nói rằng mình ổn. Chúng chỉ mừng vì mình đã về.</p><p>Con người đôi khi cũng cần một tình thương giản dị như vậy. Không hỏi quá nhiều, không phán xét, không bắt mình phải tỏ ra vui. Chỉ cần có ai đó nhìn thấy mình trở về, và mừng vì điều ấy.</p> </div> </details> </article><article id="cong-viec" class="life-card life-card--blue"> <div class="life-card__top"> <span>💻</span> <div> <p>Nhịp sống</p> <h3>Công việc</h3> </div> </div> <p class="life-card__summary">Có những việc tưởng nhỏ, nhưng làm rồi mới thấy cần rất nhiều thời gian.</p> <details class="life-card__details"> <summary>Đọc vài dòng</summary> <div> <p>Công việc có những ngày rất cuốn. Có việc tưởng đơn giản, nhưng khi bắt tay vào mới thấy cần nhiều thời gian hơn mình nghĩ. Có hôm mở máy tính khi trời đã tối, trả lời một tin nhắn, sửa một phần việc, rồi ngồi nhìn màn hình để sắp xếp lại suy nghĩ.</p><p>Không phải ngày nào cũng có cảm hứng. Có ngày chỉ muốn tắt hết đi, ngồi yên một lúc, nghe một bài hát đủ chậm để đầu óc thôi chạy quá nhanh.</p><p>Nhưng rồi Nghĩa vẫn làm từng chút một. Có thể chậm, có thể mệt, nhưng mỗi ngày vẫn cố làm mọi thứ gọn hơn, rõ hơn, nhẹ hơn.</p> </div> </details> </article><article id="moi-quan-he" class="life-card life-card--crimson"> <div class="life-card__top"> <span>🕯️</span> <div> <p>Người đến, người đi</p> <h3>Những mối quan hệ</h3> </div> </div> <p class="life-card__summary">Có người đi cùng một đoạn. Có người chỉ ghé qua một mùa.</p> <details class="life-card__details"> <summary>Đọc vài dòng</summary> <div> <p>Có người từng rất gần, rồi ít nói chuyện hơn. Không hẳn vì có chuyện gì. Có khi chỉ vì mỗi người có một nhịp sống riêng, một mối bận tâm riêng, một con đường riêng để đi tiếp.</p><p>Tin nhắn thưa dần. Cuộc hẹn ít đi. Những câu chuyện từng kể rất dài cũng dừng lại ở vài lời hỏi thăm ngắn. Có người đi cùng mình một đoạn. Có người chỉ ghé qua một mùa.</p><p>Ai còn ở lại thì thương. Ai đã xa thì biết ơn. Những điều không thể giữ, mình đặt xuống nhẹ hơn, để lòng không phải nặng mãi vì một điều đã thuộc về hôm qua.</p> </div> </details> </article><article id="mot-nua-cung-dang-nhu-minh" class="life-card life-card--gold"> <div class="life-card__top"> <span>✨</span> <div> <p>Xa mà gần</p> <h3>Một nửa cũng đang như mình</h3> </div> </div> <p class="life-card__summary">Có thể đâu đó cũng có một người đang đi qua những ngày tương tự.</p> <details class="life-card__details"> <summary>Đọc vài dòng</summary> <div> <p>Đâu đó có thể có một người đang giống Nghĩa. Cũng có ngày bận rộn. Cũng có tối chỉ muốn ngồi yên. Cũng nghe đi nghe lại một bài hát cũ, không hẳn vì buồn, mà vì bài hát ấy hiểu được một phần không dễ gọi tên.</p><p>Có thể người ấy cũng ổn với cuộc sống của mình, nhưng trong lòng vẫn mong có ai đó hiểu mà không cần nói quá nhiều. Một người không vội kéo mình ra khỏi im lặng, chỉ ngồi cạnh và để mọi thứ tự dịu xuống.</p><p>Không vội. Nếu thật sự có một người như thế, mong một ngày nào đó hai người gặp nhau vào một thời điểm vừa đủ. Không quá sớm, không quá muộn. Chỉ vừa đủ để nhận ra nhau.</p> </div> </details> </article><article id="neu-ban-ghe-qua-day" class="life-card life-card--blue"> <div class="life-card__top"> <span>📮</span> <div> <p>Lời chào</p> <h3>Nếu bạn ghé qua đây</h3> </div> </div> <p class="life-card__summary">Một lời chào nhẹ cho người tình cờ dừng lại ở góc nhỏ này.</p> <details class="life-card__details"> <summary>Đọc vài dòng</summary> <div> <p>Có thể bạn ghé qua vì tình cờ. Có thể vì lâu rồi không thấy Nghĩa xuất hiện nhiều. Có thể vì một bài hát nào đó, một dòng chữ nào đó, hoặc chỉ vì hôm nay bạn cũng muốn dừng lại ở một nơi yên hơn.</p><p>Cảm ơn vì đã dừng lại. Ở đây không có gì lớn lao. Chỉ có vài dòng tự sự, một nhân vật anime giống Nghĩa, vài bản nhạc, và những cảm xúc đời thường được đặt xuống thật nhẹ.</p><p>Nếu ai đó cũng thấy cô đơn, mệt, lặng đi giữa cuộc sống rất ồn, mong người ấy biết rằng không chỉ riêng mình đi qua những ngày như vậy.</p> </div> </details> </article> </div> </section> <section id="nhung-bai-hat" class="music-corner" data-reveal> <div class="music-corner__visual" aria-hidden="true"> <div class="cassette"> <span class="cassette__label">NGHĨA MIX</span> <div class="cassette__reels"> <span></span> <span></span> </div> <div class="cassette__line"></div> </div> </div> <div class="music-corner__content"> <p class="section-kicker">Góc nghe nhạc</p> <h2>Những bài hát Nghĩa hay nghe</h2> <p>
+Có những bài hát, Nghĩa nghe không chỉ vì giai điệu hay. Mà vì nó giữ lại
+            một cảm giác. Một con đường cũ. Một buổi tối muộn. Một người từng đi ngang qua đời mình.
+</p> <div class="track-preview-list"> <button type="button" class="track-preview track-preview--button" data-track-index="0" aria-label="Phát bài Năm Về Sau"> <span>01</span> <strong>Năm Về Sau</strong> <small>Một ngày lặng</small> </button><button type="button" class="track-preview track-preview--button" data-track-index="1" aria-label="Phát bài Anh Đau Từ Lúc Em Đi"> <span>02</span> <strong>Anh Đau Từ Lúc Em Đi</strong> <small>Một ngày lặng</small> </button><button type="button" class="track-preview track-preview--button" data-track-index="2" aria-label="Phát bài Anh Thanh Niên"> <span>03</span> <strong>Anh Thanh Niên</strong> <small>Một ngày lặng</small> </button><button type="button" class="track-preview track-preview--button" data-track-index="3" aria-label="Phát bài Bánh Mì Không"> <span>04</span> <strong>Bánh Mì Không</strong> <small>Một ngày lặng</small> </button><button type="button" class="track-preview track-preview--button" data-track-index="4" aria-label="Phát bài Buồn Thì Cứ Khóc Đi"> <span>05</span> <strong>Buồn Thì Cứ Khóc Đi</strong> <small>Một ngày lặng</small> </button> </div> </div> </section> <section class="memory-strip" data-reveal> <div class="section-head"> <p class="section-kicker">Những lát cắt nhỏ</p> <h2>Có những khoảnh khắc không cần kể quá dài</h2> </div> <div class="memory-row"> <article> <span>01</span> <p>Một con đường có ánh đèn vàng.</p> </article><article> <span>02</span> <p>Một buổi tối mở máy khi trời đã muộn.</p> </article><article> <span>03</span> <p>Tiếng chó nhỏ chạy ra ngoài cổng.</p> </article><article> <span>04</span> <p>Một tin nhắn chưa biết trả lời sao.</p> </article><article> <span>05</span> <p>Một bài hát cũ tự nhiên vang lên đúng lúc.</p> </article> </div> </section> <section id="gui-loi-nhan" class="contact-section" data-reveal> <div class="contact-card"> <div> <p class="section-kicker">Gửi lại một lời nhắn</p> <h2>Nếu có điều gì muốn nói</h2> <p>
+Nếu có điều gì muốn nói, hoặc chỉ đơn giản là muốn để lại vài dòng,
+        bạn có thể viết ở đây. Một lời chào, một kỷ niệm, một bài hát gợi nhớ,
+        hay chỉ là một câu rất ngắn. Nghĩa sẽ đọc khi có thời gian thật yên.
+</p> <p class="form-hint">
+Lời nhắn sẽ được gửi về Google Form riêng của Nghĩa.
+</p> </div> <div> <form id="nghia-message-form" class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSciIyW-oN_a3C-hndKx_jYdhPlUJHfupb_pRqw6ExkW93wDVQ/formResponse" method="POST" target="hidden_google_form_iframe"> <label>
+Tên của bạn
+<input name="entry.1825669690" type="text" placeholder="Bạn muốn Nghĩa gọi bạn là..." required> </label> <label>
+Email hoặc cách liên hệ
+<input name="entry.2006464137" type="text" placeholder="Email, Facebook, hoặc một cách liên hệ khác"> </label> <label>
+Lời nhắn muốn gửi
+<textarea name="entry.128532901" rows="6" placeholder="Viết vài dòng ở đây..." required></textarea> </label> <button class="btn btn-primary" type="submit">
+Gửi lời nhắn
+</button> <p id="form-success-message" class="form-success hidden">
+Cảm ơn bạn. Lời nhắn đã được gửi đi rồi.
+</p> </form> <iframe name="hidden_google_form_iframe" id="hidden_google_form_iframe" class="hidden"></iframe> </div> </div> </section> <script>
+  (() => {
+    const form = document.getElementById('nghia-message-form');
+    const message = document.getElementById('form-success-message');
+
+    if (!form || !message) return;
+
+    form.addEventListener('submit', () => {
+      window.setTimeout(() => {
+        message.classList.remove('hidden');
+        form.reset();
+      }, 700);
+    });
+  })();
+</script> <section class="ending-section ending-section--cinematic" data-reveal> <div class="ending-card ending-card--cinematic"> <div class="ending-card__glow" aria-hidden="true"></div> <div class="ending-card__intro"> <p class="section-kicker">Cảnh cuối ngày</p> <h2>Ngày vẫn trôi. Nghĩa vẫn ở đây.</h2> <p>
+Có những điều không cần kể quá dài. Chỉ cần giữ lại một chút ánh đèn,
+        một bài hát cũ, một nơi để quay về, và cảm giác mình vẫn đang đi tiếp thật chậm.
+</p> </div> <div class="ending-signals" aria-label="Những điều Nghĩa muốn giữ lại"> <article> <span class="ending-signal__icon">🏠</span> <p>Gia đình</p> <strong>Nơi mọi thứ dịu xuống</strong> </article> <article> <span class="ending-signal__icon">🎧</span> <p>Âm nhạc</p> <strong>Một bài hát giữ lại cảm giác cũ</strong> </article> <article> <span class="ending-signal__icon">🐾</span> <p>Chó nhỏ</p> <strong>Vẫn mừng khi Nghĩa về tới cổng</strong> </article> <article> <span class="ending-signal__icon">🌙</span> <p>Khoảng lặng</p> <strong>Để lòng mình nhẹ hơn một chút</strong> </article> </div> <div class="ending-card__final"> <p>Ở đâu đó, có lẽ một người nào đó cũng đang đi qua những ngày giống mình.</p> <h3>Một ngày nào đó,<br>khi mọi thứ đủ nhẹ,<br>Nghĩa sẽ kể tiếp.</h3> </div> </div> </section> </div> </main> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var g=Object.defineProperty;var w=(c,s,d)=>s in c?g(c,s,{enumerable:!0,configurable:!0,writable:!0,value:d}):c[s]=d;var l=(c,s,d)=>w(c,typeof s!="symbol"?s+"":s,d);var E=new Set(["__proto__","constructor","prototype"]);{let c={0:t=>y(t),1:t=>d(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(d(t)),5:t=>new Set(d(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>Number.POSITIVE_INFINITY*t},s=t=>{let[p,e]=t;return p in c?c[p](e):void 0},d=t=>t.map(s),y=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([p,e])=>[p,s(e)]));class f extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},i=this.querySelectorAll("template[data-astro-template]");for(let o of i){let a=o.closest(this.tagName);a!=null&&a.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let a=o.closest(this.tagName);a!=null&&a.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let u;try{u=this.hasAttribute("props")?y(JSON.parse(this.getAttribute("props"))):{}}catch(o){let a=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(a+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${a}`,this.getAttribute("props"),o),o}let h;await this.hydrator(this)(this.Component,u,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}getRetryImportUrl(e){let n=new URL(e,document.baseURI),r=`astro-retry=${Date.now()}`,i=n.hash.replace(/^#/,"");return n.hash=i?`${i}&${r}`:r,n.toString()}async importWithRetry(e){try{return await import(e)}catch(n){return await new Promise(r=>setTimeout(r,1e3)),import(this.getRetryImportUrl(e))}}handleHydrationError(e){let n=this.getAttribute("component-url"),r=new CustomEvent("astro:hydration-error",{cancelable:!0,bubbles:!0,composed:!0,detail:{error:e,componentUrl:n}});this.dispatchEvent(r)&&console.error(`[astro-island] Error hydrating ${n}`,e)}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url");try{let[i,{default:u}]=await Promise.all([this.importWithRetry(this.getAttribute("component-url")),r?this.importWithRetry(r):Promise.resolve({default:()=>()=>{}})]),h=this.getAttribute("component-export")||"default";if(h.includes(".")){this.Component=i;for(let m of h.split(".")){if(E.has(m)||!this.Component||typeof this.Component!="object"&&typeof this.Component!="function"||!Object.hasOwn(this.Component,m))throw new Error(`Invalid component export path: ${h}`);this.Component=this.Component[m]}}else{if(E.has(h))throw new Error(`Invalid component export path: ${h}`);this.Component=i[h]}return this.hydrator=u,this.hydrate}catch(i){return this.handleHydrationError(i),()=>{}}},e,this)}catch(r){this.handleHydrationError(r)}}attributeChangedCallback(){this.hydrate()}}l(f,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",f)}})();</script><astro-island uid="Z7IeJH" prefix="r1" component-url="/_astro/MusicPlayer.D59DtnX8.js" component-export="default" renderer-url="/_astro/client.DTojXMD-.js" props="{&quot;tracks&quot;:[1,[[0,{&quot;id&quot;:[0,&quot;01-50 năm về sau&quot;],&quot;order&quot;:[0,50],&quot;title&quot;:[0,&quot;Năm Về Sau&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/50%20n%C4%83m%20v%E1%BB%81%20sau.mp3&quot;],&quot;filename&quot;:[0,&quot;50 năm về sau.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;02-Anh đau từ lúc em đi&quot;],&quot;order&quot;:[0,10001],&quot;title&quot;:[0,&quot;Anh Đau Từ Lúc Em Đi&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Anh%20%C4%91au%20t%E1%BB%AB%20l%C3%BAc%20em%20%C4%91i.mp3&quot;],&quot;filename&quot;:[0,&quot;Anh đau từ lúc em đi.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;03-Anh thanh niên&quot;],&quot;order&quot;:[0,10002],&quot;title&quot;:[0,&quot;Anh Thanh Niên&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Anh%20thanh%20ni%C3%AAn.mp3&quot;],&quot;filename&quot;:[0,&quot;Anh thanh niên.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;04-Bánh mì không&quot;],&quot;order&quot;:[0,10003],&quot;title&quot;:[0,&quot;Bánh Mì Không&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/B%C3%A1nh%20m%C3%AC%20kh%C3%B4ng.mp3&quot;],&quot;filename&quot;:[0,&quot;Bánh mì không.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;05-Buồn thì cứ khóc đi&quot;],&quot;order&quot;:[0,10004],&quot;title&quot;:[0,&quot;Buồn Thì Cứ Khóc Đi&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Bu%E1%BB%93n%20th%C3%AC%20c%E1%BB%A9%20kh%C3%B3c%20%C4%91i.mp3&quot;],&quot;filename&quot;:[0,&quot;Buồn thì cứ khóc đi.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;06-Bước chân lẻ loi&quot;],&quot;order&quot;:[0,10005],&quot;title&quot;:[0,&quot;Bước Chân Lẻ Loi&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/B%C6%B0%E1%BB%9Bc%20ch%C3%A2n%20l%E1%BA%BB%20loi.mp3&quot;],&quot;filename&quot;:[0,&quot;Bước chân lẻ loi.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;07-Cào cào lá tre&quot;],&quot;order&quot;:[0,10006],&quot;title&quot;:[0,&quot;Cào Cào Lá Tre&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/C%C3%A0o%20c%C3%A0o%20l%C3%A1%20tre.mp3&quot;],&quot;filename&quot;:[0,&quot;Cào cào lá tre.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;08-Chắc vì mình chưa tốt&quot;],&quot;order&quot;:[0,10007],&quot;title&quot;:[0,&quot;Chắc Vì Mình Chưa Tốt&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Ch%E1%BA%AFc%20v%C3%AC%20m%C3%ACnh%20ch%C6%B0a%20t%E1%BB%91t.mp3&quot;],&quot;filename&quot;:[0,&quot;Chắc vì mình chưa tốt.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;09-Chuyến xe cuộc đời&quot;],&quot;order&quot;:[0,10008],&quot;title&quot;:[0,&quot;Chuyến Xe Cuộc Đời&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Chuy%E1%BA%BFn%20xe%20cu%E1%BB%99c%20%C4%91%E1%BB%9Di.mp3&quot;],&quot;filename&quot;:[0,&quot;Chuyến xe cuộc đời.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;10-Cỏ dại và hoa dành dành&quot;],&quot;order&quot;:[0,10009],&quot;title&quot;:[0,&quot;Cỏ Dại Và Hoa Dành Dành&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/C%E1%BB%8F%20d%E1%BA%A1i%20v%C3%A0%20hoa%20d%C3%A0nh%20d%C3%A0nh.mp3&quot;],&quot;filename&quot;:[0,&quot;Cỏ dại và hoa dành dành.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;11-Cô gái M52&quot;],&quot;order&quot;:[0,10010],&quot;title&quot;:[0,&quot;Cô Gái M52&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/C%C3%B4%20g%C3%A1i%20M52.mp3&quot;],&quot;filename&quot;:[0,&quot;Cô gái M52.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;12-Cùng anh&quot;],&quot;order&quot;:[0,10011],&quot;title&quot;:[0,&quot;Cùng Anh&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/C%C3%B9ng%20anh.mp3&quot;],&quot;filename&quot;:[0,&quot;Cùng anh.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;13-Dáng em&quot;],&quot;order&quot;:[0,10012],&quot;title&quot;:[0,&quot;Dáng Em&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/D%C3%A1ng%20em.mp3&quot;],&quot;filename&quot;:[0,&quot;Dáng em.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;14-Đêm trăng tình yêu&quot;],&quot;order&quot;:[0,10013],&quot;title&quot;:[0,&quot;Đêm Trăng Tình Yêu&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/%C4%90%C3%AAm%20tr%C4%83ng%20t%C3%ACnh%20y%C3%AAu.mp3&quot;],&quot;filename&quot;:[0,&quot;Đêm trăng tình yêu.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;15-Đúng người đúng thời điểm&quot;],&quot;order&quot;:[0,10014],&quot;title&quot;:[0,&quot;Đúng Người Đúng Thời Điểm&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/%C4%90%C3%BAng%20ng%C6%B0%E1%BB%9Di%20%C4%91%C3%BAng%20th%E1%BB%9Di%20%C4%91i%E1%BB%83m.mp3&quot;],&quot;filename&quot;:[0,&quot;Đúng người đúng thời điểm.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;16-Đừng ai nhắc về cô ấy&quot;],&quot;order&quot;:[0,10015],&quot;title&quot;:[0,&quot;Đừng Ai Nhắc Về Cô Ấy&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/%C4%90%E1%BB%ABng%20ai%20nh%E1%BA%AFc%20v%E1%BB%81%20c%C3%B4%20%E1%BA%A5y.mp3&quot;],&quot;filename&quot;:[0,&quot;Đừng ai nhắc về cô ấy.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;17-E là không thể&quot;],&quot;order&quot;:[0,10016],&quot;title&quot;:[0,&quot;E Là Không Thể&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/E%20l%C3%A0%20kh%C3%B4ng%20th%E1%BB%83.mp3&quot;],&quot;filename&quot;:[0,&quot;E là không thể.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;18-Gặp em đúng lúc&quot;],&quot;order&quot;:[0,10017],&quot;title&quot;:[0,&quot;Gặp Em Đúng Lúc&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/G%E1%BA%B7p%20em%20%C4%91%C3%BAng%20l%C3%BAc.mp3&quot;],&quot;filename&quot;:[0,&quot;Gặp em đúng lúc.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;19-Hạnh phúc cuối cùng&quot;],&quot;order&quot;:[0,10018],&quot;title&quot;:[0,&quot;Hạnh Phúc Cuối Cùng&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/H%E1%BA%A1nh%20ph%C3%BAc%20cu%E1%BB%91i%20c%C3%B9ng.mp3&quot;],&quot;filename&quot;:[0,&quot;Hạnh phúc cuối cùng.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;20-Họa sĩ tồi&quot;],&quot;order&quot;:[0,10019],&quot;title&quot;:[0,&quot;Họa Sĩ Tồi&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/H%E1%BB%8Da%20s%C4%A9%20t%E1%BB%93i.mp3&quot;],&quot;filename&quot;:[0,&quot;Họa sĩ tồi.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;21-Hôm nay em cưới rồi&quot;],&quot;order&quot;:[0,10020],&quot;title&quot;:[0,&quot;Hôm Nay Em Cưới Rồi&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/H%C3%B4m%20nay%20em%20c%C6%B0%E1%BB%9Bi%20r%E1%BB%93i.mp3&quot;],&quot;filename&quot;:[0,&quot;Hôm nay em cưới rồi.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;22-Khi cô đơn em nhớ ai&quot;],&quot;order&quot;:[0,10021],&quot;title&quot;:[0,&quot;Khi Cô Đơn Em Nhớ Ai&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Khi%20c%C3%B4%20%C4%91%C6%A1n%20em%20nh%E1%BB%9B%20ai.mp3&quot;],&quot;filename&quot;:[0,&quot;Khi cô đơn em nhớ ai.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;23-Lao tâm khổ tứ&quot;],&quot;order&quot;:[0,10022],&quot;title&quot;:[0,&quot;Lao Tâm Khổ Tứ&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Lao%20t%C3%A2m%20kh%E1%BB%95%20t%E1%BB%A9.mp3&quot;],&quot;filename&quot;:[0,&quot;Lao tâm khổ tứ.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;24-Mình yêu nhau bình yên thôi&quot;],&quot;order&quot;:[0,10023],&quot;title&quot;:[0,&quot;Mình Yêu Nhau Bình Yên Thôi&quot;],&quot;mood&quot;:[0,&quot;Đường về nhà&quot;],&quot;src&quot;:[0,&quot;/music/M%C3%ACnh%20y%C3%AAu%20nhau%20b%C3%ACnh%20y%C3%AAn%20th%C3%B4i.mp3&quot;],&quot;filename&quot;:[0,&quot;Mình yêu nhau bình yên thôi.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;25-Mộng hoa sim&quot;],&quot;order&quot;:[0,10024],&quot;title&quot;:[0,&quot;Mộng Hoa Sim&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/M%E1%BB%99ng%20hoa%20sim.mp3&quot;],&quot;filename&quot;:[0,&quot;Mộng hoa sim.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;26-Một nhà&quot;],&quot;order&quot;:[0,10025],&quot;title&quot;:[0,&quot;Một Nhà&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/M%E1%BB%99t%20nh%C3%A0.mp3&quot;],&quot;filename&quot;:[0,&quot;Một nhà.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;27-Nếu lúc trước em đừng tới&quot;],&quot;order&quot;:[0,10026],&quot;title&quot;:[0,&quot;Nếu Lúc Trước Em Đừng Tới&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/N%E1%BA%BFu%20l%C3%BAc%20tr%C6%B0%E1%BB%9Bc%20em%20%C4%91%E1%BB%ABng%20t%E1%BB%9Bi.mp3&quot;],&quot;filename&quot;:[0,&quot;Nếu lúc trước em đừng tới.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;28-Ngày em đẹp nhất&quot;],&quot;order&quot;:[0,10027],&quot;title&quot;:[0,&quot;Ngày Em Đẹp Nhất&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Ng%C3%A0y%20em%20%C4%91%E1%BA%B9p%20nh%E1%BA%A5t.mp3&quot;],&quot;filename&quot;:[0,&quot;Ngày em đẹp nhất.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;29-Ngày mai em đi&quot;],&quot;order&quot;:[0,10028],&quot;title&quot;:[0,&quot;Ngày Mai Em Đi&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Ng%C3%A0y%20mai%20em%20%C4%91i.mp3&quot;],&quot;filename&quot;:[0,&quot;Ngày mai em đi.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;30-Ngày mai người ta lấy chồng&quot;],&quot;order&quot;:[0,10029],&quot;title&quot;:[0,&quot;Ngày Mai Người Ta Lấy Chồng&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Ng%C3%A0y%20mai%20ng%C6%B0%E1%BB%9Di%20ta%20l%E1%BA%A5y%20ch%E1%BB%93ng.mp3&quot;],&quot;filename&quot;:[0,&quot;Ngày mai người ta lấy chồng.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;31-Ngọt ngào&quot;],&quot;order&quot;:[0,10030],&quot;title&quot;:[0,&quot;Ngọt Ngào&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Ng%E1%BB%8Dt%20ng%C3%A0o.mp3&quot;],&quot;filename&quot;:[0,&quot;Ngọt ngào.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;32-Nothing in your eyes&quot;],&quot;order&quot;:[0,10031],&quot;title&quot;:[0,&quot;Nothing In Your Eyes&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Nothing%20in%20your%20eyes.mp3&quot;],&quot;filename&quot;:[0,&quot;Nothing in your eyes.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;33-Sai người sai thời điểm&quot;],&quot;order&quot;:[0,10032],&quot;title&quot;:[0,&quot;Sai Người Sai Thời Điểm&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Sai%20ng%C6%B0%E1%BB%9Di%20sai%20th%E1%BB%9Di%20%C4%91i%E1%BB%83m.mp3&quot;],&quot;filename&quot;:[0,&quot;Sai người sai thời điểm.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;34-Sao băng khóc&quot;],&quot;order&quot;:[0,10033],&quot;title&quot;:[0,&quot;Sao Băng Khóc&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Sao%20b%C4%83ng%20kh%C3%B3c.mp3&quot;],&quot;filename&quot;:[0,&quot;Sao băng khóc.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;35-Thanh xuân&quot;],&quot;order&quot;:[0,10034],&quot;title&quot;:[0,&quot;Thanh Xuân&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Thanh%20xu%C3%A2n.mp3&quot;],&quot;filename&quot;:[0,&quot;Thanh xuân.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;36-Thay tôi yêu cô ấy&quot;],&quot;order&quot;:[0,10035],&quot;title&quot;:[0,&quot;Thay Tôi Yêu Cô Ấy&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Thay%20t%C3%B4i%20y%C3%AAu%20c%C3%B4%20%E1%BA%A5y.mp3&quot;],&quot;filename&quot;:[0,&quot;Thay tôi yêu cô ấy.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;37-Thu cuối&quot;],&quot;order&quot;:[0,10036],&quot;title&quot;:[0,&quot;Thu Cuối&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Thu%20cu%E1%BB%91i.mp3&quot;],&quot;filename&quot;:[0,&quot;Thu cuối.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;38-Tuyết yêu thương&quot;],&quot;order&quot;:[0,10037],&quot;title&quot;:[0,&quot;Tuyết Yêu Thương&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Tuy%E1%BA%BFt%20y%C3%AAu%20th%C6%B0%C6%A1ng.mp3&quot;],&quot;filename&quot;:[0,&quot;Tuyết yêu thương.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;39-Vạn sự tùy duyên&quot;],&quot;order&quot;:[0,10038],&quot;title&quot;:[0,&quot;Vạn Sự Tùy Duyên&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/V%E1%BA%A1n%20s%E1%BB%B1%20t%C3%B9y%20duy%C3%AAn.mp3&quot;],&quot;filename&quot;:[0,&quot;Vạn sự tùy duyên.mp3&quot;]}],[0,{&quot;id&quot;:[0,&quot;40-Xem như tôi từng cưới được cô ấy&quot;],&quot;order&quot;:[0,10039],&quot;title&quot;:[0,&quot;Xem Như Tôi Từng Cưới Được Cô Ấy&quot;],&quot;mood&quot;:[0,&quot;Một ngày lặng&quot;],&quot;src&quot;:[0,&quot;/music/Xem%20nh%C6%B0%20t%C3%B4i%20t%E1%BB%ABng%20c%C6%B0%E1%BB%9Bi%20%C4%91%C6%B0%E1%BB%A3c%20c%C3%B4%20%E1%BA%A5y.mp3&quot;],&quot;filename&quot;:[0,&quot;Xem như tôi từng cưới được cô ấy.mp3&quot;]}]]]}" ssr client="load" opts="{&quot;name&quot;:&quot;MusicPlayer&quot;,&quot;value&quot;:true}" await-children><aside class="music-shell" aria-label="Trình phát nhạc nền"><div class="music-player"><audio preload="none"></audio><div class="music-player__top"><div><p class="music-label">Đang nghe</p><strong>Năm Về Sau</strong><span>Một ngày lặng</span></div><button type="button" class="playlist-toggle" aria-expanded="false">Playlist</button></div><div class="music-progress"><span>0:00</span><input aria-label="Tiến trình bài hát" type="range" min="0" max="100" step="0.1" value="0"/><span>0:00</span></div><div class="music-controls"><button type="button" aria-label="Bài trước">‹</button><button type="button" class="play-button" aria-label="Phát hoặc tạm dừng">▶</button><button type="button" aria-label="Bài tiếp theo">›</button><label class="volume-control"><span>Âm lượng</span><input aria-label="Âm lượng" type="range" min="0" max="1" step="0.01" value="0.4"/></label></div></div></aside><!--astro:end--></astro-island> <script>
+    (() => {
+      const trackButtons = Array.from(document.querySelectorAll('[data-track-index]'));
+      if (!trackButtons.length) return;
+
+      const setCurrentButton = (currentIndex) => {
+        trackButtons.forEach((button) => {
+          const index = Number(button.getAttribute('data-track-index'));
+          const isCurrent = index === currentIndex;
+          button.classList.toggle('is-current', isCurrent);
+          button.setAttribute('aria-pressed', String(isCurrent));
+        });
+      };
+
+      trackButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const index = Number(button.getAttribute('data-track-index'));
+          if (!Number.isFinite(index)) return;
+
+          window.__nghiaPendingTrackIndex = index;
+
+          window.dispatchEvent(
+            new CustomEvent('nghia:play-track', {
+              detail: { index }
+            })
+          );
+
+          setCurrentButton(index);
+          document.documentElement.classList.add('music-is-playing');
+        });
+      });
+
+      window.addEventListener('nghia:music-state', (event) => {
+        const detail = event.detail || {};
+        const currentIndex = Number(detail.currentIndex || 0);
+        const isPlaying = Boolean(detail.isPlaying);
+
+        setCurrentButton(currentIndex);
+        document.documentElement.classList.toggle('music-is-playing', isPlaying);
+        document.documentElement.classList.toggle('music-has-started', Boolean(detail.hasStarted));
+      });
+
+      setCurrentButton(0);
+    })();
+  </script> <footer class="site-footer"> <p>© 2026 Bùi Trọng Nghĩa · Những Ngày Lặng Của Nghĩa</p> <p>Một góc nhỏ để viết, nghe nhạc và đi qua những ngày thật chậm.</p> </footer>  <script>
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const revealItems = Array.from(document.querySelectorAll('[data-reveal]'));
+
+        if (reduceMotion) {
+          revealItems.forEach((item) => item.classList.add('is-visible'));
+          return;
+        }
+
+        if (revealItems.length) {
+          const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+          revealItems.forEach((item) => revealObserver.observe(item));
+        }
+      })();
+    </script> <script>
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const cards = Array.from(
+          document.querySelectorAll(
+            '.story-card, .contact-card, .ending-card, .featured-diary, .life-card, .music-corner, .now-panel'
+          )
+        );
+
+        if (reduceMotion || !cards.length) return;
+
+        let activeCard = null;
+
+        const setActiveCard = (nextCard) => {
+          if (activeCard === nextCard) return;
+
+          if (activeCard) activeCard.classList.remove('is-reading-card');
+          activeCard = nextCard;
+          if (activeCard) activeCard.classList.add('is-reading-card');
+        };
+
+        const readingObserver = new IntersectionObserver((entries) => {
+          const visibleEntries = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+          if (visibleEntries.length) {
+            setActiveCard(visibleEntries[0].target);
+            return;
+          }
+
+          const stillVisible = cards.find((card) => {
+            const rect = card.getBoundingClientRect();
+            return rect.top < window.innerHeight * 0.62 && rect.bottom > window.innerHeight * 0.28;
+          });
+
+          if (stillVisible) setActiveCard(stillVisible);
+        }, {
+          threshold: [0.18, 0.32, 0.48, 0.64],
+          rootMargin: '-18% 0px -28% 0px'
+        });
+
+        cards.forEach((card) => readingObserver.observe(card));
+      })();
+    </script> <script>
+      (() => {
+        const miniTimeEl = document.getElementById('today-widget-mini-time');
+        const timeEl = document.getElementById('today-widget-time');
+        const dateEl = document.getElementById('today-widget-date');
+        const locationEl = document.getElementById('today-widget-location');
+        const locationNoteEl = document.getElementById('today-widget-location-note');
+        const weatherEl = document.getElementById('today-widget-weather');
+        const weatherNoteEl = document.getElementById('today-widget-weather-note');
+        const locationButton = document.getElementById('today-widget-location-button');
+        const widget = document.querySelector('.today-widget');
+        const toggleButton = document.querySelector('.today-widget__toggle');
+        const collapseButton = document.querySelector('.today-widget__collapse');
+
+        if (!widget || !miniTimeEl || !timeEl || !dateEl || !weatherEl) return;
+
+        const DEFAULT_LOCATION = {
+          latitude: 21.0285,
+          longitude: 105.8542,
+          label: 'Hà Nội, Việt Nam',
+          note: 'Thời tiết mặc định theo Hà Nội'
+        };
+
+        const weatherLabels = {
+          0: 'Trời quang',
+          1: 'Ít mây',
+          2: 'Mây rải rác',
+          3: 'Nhiều mây',
+          45: 'Có sương mù',
+          48: 'Sương mù đóng băng',
+          51: 'Mưa phùn nhẹ',
+          53: 'Mưa phùn vừa',
+          55: 'Mưa phùn dày',
+          56: 'Mưa phùn lạnh nhẹ',
+          57: 'Mưa phùn lạnh dày',
+          61: 'Mưa nhẹ',
+          63: 'Mưa vừa',
+          65: 'Mưa lớn',
+          66: 'Mưa lạnh nhẹ',
+          67: 'Mưa lạnh mạnh',
+          71: 'Tuyết nhẹ',
+          73: 'Tuyết vừa',
+          75: 'Tuyết dày',
+          77: 'Hạt tuyết',
+          80: 'Mưa rào nhẹ',
+          81: 'Mưa rào vừa',
+          82: 'Mưa rào mạnh',
+          85: 'Mưa tuyết nhẹ',
+          86: 'Mưa tuyết mạnh',
+          95: 'Có dông',
+          96: 'Dông kèm mưa đá nhẹ',
+          99: 'Dông kèm mưa đá mạnh'
+        };
+
+        function updateClock() {
+          const now = new Date();
+          const time = new Intl.DateTimeFormat('vi-VN', {
+            hour: '2-digit',
+            minute: '2-digit'
+          }).format(now);
+
+          const date = new Intl.DateTimeFormat('vi-VN', {
+            weekday: 'long',
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+          }).format(now);
+
+          miniTimeEl.textContent = time;
+          timeEl.textContent = time;
+          dateEl.textContent = date;
+        }
+
+        function setCollapsed(value) {
+          widget.classList.toggle('today-widget--collapsed', value);
+          toggleButton?.setAttribute('aria-expanded', String(!value));
+          try {
+            window.localStorage.setItem('nghia-today-widget-collapsed', value ? '1' : '0');
+          } catch (_) {}
+        }
+
+        function getWeatherIcon(code) {
+          if ([0, 1].includes(code)) return '☀️';
+          if ([2, 3].includes(code)) return '☁️';
+          if ([45, 48].includes(code)) return '🌫';
+          if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) return '🌧';
+          if ([95, 96, 99].includes(code)) return '⛈';
+          if ([71, 73, 75, 77, 85, 86].includes(code)) return '❄️';
+          return '🌤';
+        }
+
+        async function fetchWeather(place) {
+          weatherEl.textContent = 'Đang lấy thời tiết...';
+
+          try {
+            const url = new URL('https://api.open-meteo.com/v1/forecast');
+            url.searchParams.set('latitude', String(place.latitude));
+            url.searchParams.set('longitude', String(place.longitude));
+            url.searchParams.set('current_weather', 'true');
+            url.searchParams.set('timezone', 'auto');
+
+            const response = await fetch(url.toString());
+            if (!response.ok) throw new Error('Weather request failed');
+
+            const data = await response.json();
+            const current = data.current_weather;
+            if (!current) throw new Error('No current weather');
+
+            const temp = Math.round(current.temperature);
+            const code = Number(current.weathercode);
+            const label = weatherLabels[code] || 'Thời tiết hiện tại';
+            const icon = getWeatherIcon(code);
+
+            weatherEl.textContent = `${icon} ${temp}°C · ${label}`;
+            weatherNoteEl.textContent = `Gió ${Math.round(current.windspeed || 0)} km/h`;
+          } catch (error) {
+            weatherEl.textContent = 'Chưa lấy được thời tiết';
+            weatherNoteEl.textContent = 'Bạn có thể thử cập nhật lại vị trí';
+          }
+        }
+
+        async function reverseGeocode(latitude, longitude) {
+          try {
+            const url = new URL('https://nominatim.openstreetmap.org/reverse');
+            url.searchParams.set('format', 'jsonv2');
+            url.searchParams.set('lat', String(latitude));
+            url.searchParams.set('lon', String(longitude));
+            url.searchParams.set('zoom', '10');
+            url.searchParams.set('accept-language', 'vi');
+
+            const response = await fetch(url.toString(), {
+              headers: {
+                Accept: 'application/json'
+              }
+            });
+
+            if (!response.ok) throw new Error('Reverse geocode failed');
+
+            const data = await response.json();
+            const address = data.address || {};
+            const city =
+              address.city ||
+              address.town ||
+              address.village ||
+              address.county ||
+              address.suburb ||
+              address.state;
+
+            const country = address.country || 'Việt Nam';
+            return city ? `${city}, ${country}` : country;
+          } catch (error) {
+            return 'Vị trí hiện tại';
+          }
+        }
+
+        async function useCoordinates(latitude, longitude, isUserLocation = false) {
+          const label = isUserLocation
+            ? await reverseGeocode(latitude, longitude)
+            : DEFAULT_LOCATION.label;
+
+          if (locationEl) locationEl.textContent = label;
+          if (locationNoteEl) {
+            locationNoteEl.textContent = isUserLocation
+              ? 'Đang dùng vị trí trình duyệt cho phép'
+              : DEFAULT_LOCATION.note;
+          }
+
+          await fetchWeather({ latitude, longitude });
+        }
+
+        function requestUserLocation() {
+          if (!navigator.geolocation) {
+            if (locationNoteEl) locationNoteEl.textContent = 'Trình duyệt chưa hỗ trợ vị trí';
+            return;
+          }
+
+          if (locationNoteEl) locationNoteEl.textContent = 'Đang xin quyền vị trí...';
+          if (locationButton) locationButton.disabled = true;
+
+          navigator.geolocation.getCurrentPosition(
+            async (position) => {
+              const { latitude, longitude } = position.coords;
+              await useCoordinates(latitude, longitude, true);
+              if (locationButton) {
+                locationButton.disabled = false;
+                locationButton.textContent = 'Cập nhật lại';
+              }
+            },
+            () => {
+              if (locationNoteEl) locationNoteEl.textContent = 'Bạn chưa bật quyền vị trí';
+              if (locationButton) locationButton.disabled = false;
+              fetchWeather(DEFAULT_LOCATION);
+            },
+            {
+              enableHighAccuracy: false,
+              timeout: 8000,
+              maximumAge: 1000 * 60 * 30
+            }
+          );
+        }
+
+        updateClock();
+        window.setInterval(updateClock, 30 * 1000);
+        useCoordinates(DEFAULT_LOCATION.latitude, DEFAULT_LOCATION.longitude, false);
+
+        locationButton?.addEventListener('click', requestUserLocation);
+        collapseButton?.addEventListener('click', () => setCollapsed(true));
+        toggleButton?.addEventListener('click', () => setCollapsed(false));
+
+        try {
+          const savedCollapsed = window.localStorage.getItem('nghia-today-widget-collapsed') === '1';
+          setCollapsed(savedCollapsed);
+        } catch (_) {}
+      })();
+    </script> </body> </html>
